@@ -1,0 +1,94 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Istanbul",
+      "country": "Türkiye",
+      "stays": 248,
+      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200"
+    },
+    {
+      "id": 2,
+      "name": "Antalya",
+      "country": "Türkiye",
+      "stays": 186,
+      "image": "https://images.unsplash.com/photo-1601645191163-3fc0d5d64e0c"
+    },
+    {
+      "id": 3,
+      "name": "Fethiye",
+      "country": "Türkiye",
+      "stays": 124,
+      "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0"
+    },
+    {
+      "id": 4,
+      "name": "Cappadocia",
+      "country": "Türkiye",
+      "stays": 97,
+      "image": "https://images.unsplash.com/photo-1528181304800-259b08848526"
+    }
+  ],
+  "properties": [
+    {
+      "id": 1,
+      "name": "Seaside Villa",
+      "location": "Fethiye, Türkiye",
+      "rating": 4.9,
+      "reviews": 128,
+      "pricePerNight": 145,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+    },
+    {
+      "id": 2,
+      "name": "Bosphorus View Apartment",
+      "location": "Istanbul, Türkiye",
+      "rating": 4.8,
+      "reviews": 94,
+      "pricePerNight": 120,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+    },
+    {
+      "id": 3,
+      "name": "Mediterranean Escape",
+      "location": "Antalya, Türkiye",
+      "rating": 4.7,
+      "reviews": 76,
+      "pricePerNight": 110,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+    },
+    {
+      "id": 4,
+      "name": "Cave House",
+      "location": "Cappadocia, Türkiye",
+      "rating": 4.9,
+      "reviews": 211,
+      "pricePerNight": 175,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1572331165267-854da2b10ccc"
+    },
+    {
+      "id": 5,
+      "name": "Old Town Residence",
+      "location": "Istanbul, Türkiye",
+      "rating": 4.6,
+      "reviews": 63,
+      "pricePerNight": 95,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+    },
+    {
+      "id": 6,
+      "name": "Blue Lagoon Retreat",
+      "location": "Fethiye, Türkiye",
+      "rating": 4.8,
+      "reviews": 142,
+      "pricePerNight": 160,
+      "currency": "USD",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811"
+    }
+  ]
+}
