@@ -1,75 +1,58 @@
-# React + TypeScript + Vite
+# SohaTravelStay
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A travel stay marketplace UI built as a frontend portfolio project. Users can browse destinations and featured stays, with search and responsive layouts.
 
-Currently, two official plugins are available:
+The first release focuses on a production-style Home page. Property data currently comes from local mock JSON, not a live backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
 
-## React Compiler
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- React Router
+- Lucide React
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Current status
 
-## Expanding the ESLint configuration
+- [x] Vite + React + TypeScript setup
+- [x] Tailwind CSS 4
+- [x] Routing
+- [x] Typed mock data for destinations and properties
+- [ ] Home page UI (navbar, hero, listings, footer)
+- [ ] Additional pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+These commands already exist in the project. You do not need to add them.
 
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+
+## Project structure
+
+```text
+src/
+  data/          Mock JSON and typed data exports
+  pages/         Route-level screens
+  types/         Shared TypeScript types
+  App.tsx        Router
+  main.tsx       App bootstrap
 ```
+
+## Data
+
+Listings are loaded from `src/data/data.json` and typed in `src/types`. This keeps the UI independent from a backend until an API is added.
