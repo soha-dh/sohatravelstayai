@@ -1,5 +1,6 @@
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
 import { Calendar, MapPin, Minus, Plus, Search, Users } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 function SearchBox() {
   const [where, setWhere] = useState('Istanbul')
@@ -7,10 +8,18 @@ function SearchBox() {
   const [checkOut, setCheckOut] = useState('2026-09-02')
   const [guests, setGuests] = useState(2)
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-  }
+  const navigate = useNavigate()
 
+function handleSubmit(event: { preventDefault: () => void } ) {
+  event.preventDefault()
+  const params = new URLSearchParams({
+    where,
+    checkIn,
+    checkOut,
+    guests: String(guests),
+  })
+  navigate(`/stays?${params.toString()}`)
+}
   return (
     <form
       onSubmit={handleSubmit}

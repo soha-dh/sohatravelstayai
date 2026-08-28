@@ -4,7 +4,7 @@ import { BedDouble, House, Info, LogIn, MapPin, Menu, X } from 'lucide-react'
 import Button from '../ui/Button'
 
 const navLinks = [
-  { label: 'Stays', to: '/', icon: BedDouble },
+  { label: 'Stays', to: '/stays', icon: BedDouble },
   { label: 'Destinations', to: '/', icon: MapPin },
   { label: 'About', to: '/', icon: Info },
 ]
