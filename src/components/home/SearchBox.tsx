@@ -2,24 +2,40 @@ import { useState } from 'react'
 import { Calendar, MapPin, Minus, Plus, Search, Users } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
-function SearchBox() {
-  const [where, setWhere] = useState('Istanbul')
-  const [checkIn, setCheckIn] = useState('2026-08-28')
-  const [checkOut, setCheckOut] = useState('2026-09-02')
-  const [guests, setGuests] = useState(2)
+type SearchBoxProps = {
+  initialWhere?: string
+  initialCheckIn?: string
+  initialCheckOut?: string
+  initialGuests?: number
+  submitLabel?: string
+}
 
+function SearchBox({
+  initialWhere = 'Istanbul',
+  initialCheckIn = '2026-08-28',
+  initialCheckOut = '2026-09-02',
+  initialGuests = 2,
+  submitLabel = 'Search',
+}: SearchBoxProps) {
+  const [where, setWhere] = useState(initialWhere)
+  const [checkIn, setCheckIn] = useState(initialCheckIn)
+  const [checkOut, setCheckOut] = useState(initialCheckOut)
+  const [guests, setGuests] = useState(initialGuests)
   const navigate = useNavigate()
 
-function handleSubmit(event: { preventDefault: () => void } ) {
-  event.preventDefault()
-  const params = new URLSearchParams({
-    where,
-    checkIn,
-    checkOut,
-    guests: String(guests),
-  })
-  navigate(`/stays?${params.toString()}`)
-}
+  function handleSubmit(event: { preventDefault: () => void }) {
+    event.preventDefault()
+    const params = new URLSearchParams({
+      where,
+      checkIn,
+      checkOut,
+      guests: String(guests),
+    })
+    navigate(`/stays?${params.toString()}`)
+  }
+
+  const isResultsSearch = submitLabel !== 'Search'
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -94,11 +110,13 @@ function handleSubmit(event: { preventDefault: () => void } ) {
 
       <button
         type="submit"
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-medium text-white transition hover:bg-blue-700 md:h-14 md:w-14 md:px-0"
-        aria-label="Search"
+        className={`inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-medium text-white transition hover:bg-blue-700 ${
+          isResultsSearch ? 'md:h-14' : 'md:h-14 md:w-14 md:px-0'
+        }`}
+        aria-label={submitLabel}
       >
         <Search className="h-5 w-5" />
-        <span className="md:hidden">Search</span>
+        <span className={isResultsSearch ? undefined : 'md:hidden'}>{submitLabel}</span>
       </button>
     </form>
   )
