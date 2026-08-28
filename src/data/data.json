@@ -40,10 +40,39 @@
       "pricePerNight": 145,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "images": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811"
+      ],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "TV", "Heating", "Hair dryer", "Hot tub", "Workspace", "Coffee maker"],
       "isInstantBook": true,
-      "guests": 6
+      "guests": 6,
+      "bedrooms": 3,
+      "beds": 4,
+      "baths": 2,
+      "sizeSqm": 180,
+      "description": "A bright seaside villa above Ölüdeniz with a private terrace and long views over the lagoon. The living space opens to the pool, and the kitchen is set up for longer stays. Mornings are quiet, and the beach is a short drive down the hill.",
+      "host": {
+        "name": "Elif",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+        "isSuperhost": true,
+        "responseRate": 100,
+        "responseTime": "within an hour",
+        "listings": 8
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.9,
+        "accuracy": 4.8,
+        "communication": 5.0,
+        "location": 4.9,
+        "value": 4.7
+      },
+      "houseRules": ["No smoking", "No parties or events", "Check-in after 3:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 2,
@@ -55,10 +84,39 @@
       "pricePerNight": 120,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      ],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine", "TV", "Heating", "Elevator", "Hair dryer", "Workspace", "Coffee maker"],
       "isInstantBook": true,
-      "guests": 4
+      "guests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "baths": 1,
+      "sizeSqm": 120,
+      "description": "A light-filled apartment in Beşiktaş with wide Bosphorus views and an easy walk to cafes, ferries, and the waterfront. The living room faces the strait, and both bedrooms are quiet at the back of the building. It works well for a couple or a small family exploring the city.",
+      "host": {
+        "name": "Can",
+        "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+        "isSuperhost": true,
+        "responseRate": 100,
+        "responseTime": "within an hour",
+        "listings": 12
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.9,
+        "accuracy": 4.8,
+        "communication": 4.8,
+        "location": 4.9,
+        "value": 4.7
+      },
+      "houseRules": ["No smoking", "No parties or events", "Quiet hours after 10:00 PM", "Check-in after 3:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 3,
@@ -70,10 +128,39 @@
       "pricePerNight": 110,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+      "images": [
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
+      ],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
       "isInstantBook": false,
-      "guests": 5
+      "guests": 5,
+      "bedrooms": 2,
+      "beds": 3,
+      "baths": 2,
+      "sizeSqm": 140,
+      "description": "A calm villa near Konyaaltı beach, with stone floors, a shaded courtyard, and a kitchen made for long breakfasts. The sea is close enough for a morning swim, and the old town is a short ride away.",
+      "host": {
+        "name": "Aylin",
+        "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+        "isSuperhost": false,
+        "responseRate": 96,
+        "responseTime": "within a few hours",
+        "listings": 3
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.8,
+        "accuracy": 4.6,
+        "communication": 4.7,
+        "location": 4.8,
+        "value": 4.6
+      },
+      "houseRules": ["No smoking", "No unannounced guests", "Check-in after 2:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 4,
@@ -85,10 +172,39 @@
       "pricePerNight": 175,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
+      "images": [
+        "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+      ],
       "propertyType": "House",
       "amenities": ["Wi-Fi", "Kitchen", "Hot tub"],
+      "allAmenities": ["Wi-Fi", "Kitchen", "Hot tub", "Heating", "Hair dryer", "Workspace", "Coffee maker", "TV"],
       "isInstantBook": true,
-      "guests": 4
+      "guests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "baths": 1,
+      "sizeSqm": 95,
+      "description": "A restored cave house in Göreme, cut into the rock with arched rooms and a small terrace for balloon mornings. The interior stays cool in summer and warm at night. Sunrise views are the reason most guests book.",
+      "host": {
+        "name": "Mehmet",
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+        "isSuperhost": true,
+        "responseRate": 99,
+        "responseTime": "within an hour",
+        "listings": 6
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.9,
+        "accuracy": 4.9,
+        "communication": 4.9,
+        "location": 5.0,
+        "value": 4.8
+      },
+      "houseRules": ["No smoking indoors", "No parties", "Shoes off inside", "Check-in after 3:00 PM"]
     },
     {
       "id": 5,
@@ -100,10 +216,39 @@
       "pricePerNight": 95,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+      "images": [
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      ],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "TV", "Heating", "Hair dryer", "Coffee maker", "Workspace"],
       "isInstantBook": true,
-      "guests": 3
+      "guests": 3,
+      "bedrooms": 1,
+      "beds": 2,
+      "baths": 1,
+      "sizeSqm": 72,
+      "description": "A compact apartment in Sultanahmet, a few minutes from the main historic sites. High ceilings and a small balcony make it feel larger than the floor plan. Best for travelers who want to walk everywhere.",
+      "host": {
+        "name": "Deniz",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+        "isSuperhost": false,
+        "responseRate": 94,
+        "responseTime": "within a few hours",
+        "listings": 4
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.7,
+        "accuracy": 4.5,
+        "communication": 4.6,
+        "location": 4.9,
+        "value": 4.6
+      },
+      "houseRules": ["No smoking", "No parties", "Check-in after 3:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 6,
@@ -115,10 +260,39 @@
       "pricePerNight": 160,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+      ],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "Hot tub"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "Hot tub", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
       "isInstantBook": true,
-      "guests": 8
+      "guests": 8,
+      "bedrooms": 4,
+      "beds": 5,
+      "baths": 3,
+      "sizeSqm": 220,
+      "description": "A large villa above the blue lagoon, with a wide terrace, indoor-outdoor kitchen, and enough rooms for a group. Evenings are for the view; days are for the beach and boat trips from the harbor.",
+      "host": {
+        "name": "Selin",
+        "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+        "isSuperhost": true,
+        "responseRate": 100,
+        "responseTime": "within an hour",
+        "listings": 5
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.8,
+        "accuracy": 4.8,
+        "communication": 4.9,
+        "location": 4.9,
+        "value": 4.6
+      },
+      "houseRules": ["No smoking indoors", "No parties after 11:00 PM", "Maximum 8 guests", "Check-in after 4:00 PM"]
     },
     {
       "id": 7,
@@ -130,10 +304,39 @@
       "pricePerNight": 130,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
+      ],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine", "TV", "Heating", "Elevator", "Hair dryer", "Workspace"],
       "isInstantBook": false,
-      "guests": 2
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 1,
+      "sizeSqm": 68,
+      "description": "A one-bedroom loft near Galata Tower, with tall windows and a small workspace. Cafes and side streets start at the door. It is designed for two people who want the city within walking distance.",
+      "host": {
+        "name": "Can",
+        "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+        "isSuperhost": true,
+        "responseRate": 100,
+        "responseTime": "within an hour",
+        "listings": 12
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.7,
+        "accuracy": 4.7,
+        "communication": 4.8,
+        "location": 4.9,
+        "value": 4.5
+      },
+      "houseRules": ["No smoking", "No extra guests", "Check-in after 3:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 8,
@@ -145,10 +348,39 @@
       "pricePerNight": 88,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858"
+      ],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "Kitchen", "Free parking"],
+      "allAmenities": ["Wi-Fi", "Kitchen", "Free parking", "TV", "Heating", "Washing Machine", "Coffee maker", "Workspace"],
       "isInstantBook": true,
-      "guests": 4
+      "guests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "baths": 1,
+      "sizeSqm": 90,
+      "description": "A ground-floor flat in Kadıköy with a small garden table and an open kitchen. The neighborhood is lively, the markets are close, and the ferry to Europe is a short walk. A practical base for a longer stay.",
+      "host": {
+        "name": "Ece",
+        "image": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce",
+        "isSuperhost": false,
+        "responseRate": 92,
+        "responseTime": "within a day",
+        "listings": 2
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.6,
+        "accuracy": 4.5,
+        "communication": 4.4,
+        "location": 4.7,
+        "value": 4.8
+      },
+      "houseRules": ["No smoking indoors", "Please close the garden gate", "Check-in after 2:00 PM"]
     },
     {
       "id": 9,
@@ -160,10 +392,39 @@
       "pricePerNight": 210,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "images": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
+      ],
       "propertyType": "Boutique hotel",
       "amenities": ["Wi-Fi", "AC", "Kitchen"],
+      "allAmenities": ["Wi-Fi", "AC", "Kitchen", "TV", "Heating", "Elevator", "Hair dryer", "Workspace", "Coffee maker"],
       "isInstantBook": true,
-      "guests": 2
+      "guests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "baths": 1,
+      "sizeSqm": 55,
+      "description": "A quiet suite near the Ortaköy waterfront, finished like a small boutique hotel room with a kitchenette. The mosque and square are nearby, but the room itself stays still at night. Built for two.",
+      "host": {
+        "name": "Can",
+        "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+        "isSuperhost": true,
+        "responseRate": 100,
+        "responseTime": "within an hour",
+        "listings": 12
+      },
+      "reviewBreakdown": {
+        "cleanliness": 5.0,
+        "accuracy": 4.9,
+        "communication": 4.9,
+        "location": 4.8,
+        "value": 4.6
+      },
+      "houseRules": ["No smoking", "No extra guests", "Check-in after 3:00 PM", "Check-out before 11:00 AM"]
     },
     {
       "id": 10,
@@ -175,10 +436,39 @@
       "pricePerNight": 79,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+      "images": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
+      ],
       "propertyType": "House",
       "amenities": ["Wi-Fi", "AC", "Washing Machine"],
+      "allAmenities": ["Wi-Fi", "AC", "Washing Machine", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
       "isInstantBook": false,
-      "guests": 3
+      "guests": 3,
+      "bedrooms": 1,
+      "beds": 2,
+      "baths": 1,
+      "sizeSqm": 64,
+      "description": "A simple design-led stay in Karaköy, close to galleries, coffee bars, and the tram. The layout is open, with a sleeping loft feel and a compact bath. Good for a short city break.",
+      "host": {
+        "name": "Kerem",
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+        "isSuperhost": false,
+        "responseRate": 90,
+        "responseTime": "within a day",
+        "listings": 1
+      },
+      "reviewBreakdown": {
+        "cleanliness": 4.5,
+        "accuracy": 4.3,
+        "communication": 4.4,
+        "location": 4.8,
+        "value": 4.6
+      },
+      "houseRules": ["No smoking", "No parties", "Stairs to the sleeping area", "Check-in after 3:00 PM"]
     }
   ]
 }
