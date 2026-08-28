@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { BedDouble, Heart, MapPin, Ruler, Share2, Star, Users, Zap } from 'lucide-react'
 import BookingCard from '../components/property/BookingCard'
 import PropertyGallery from '../components/property/PropertyGallery'
@@ -10,6 +10,10 @@ import { getPropertyById } from '../data'
 
 function PropertyDetailsPage() {
   const { id } = useParams()
+  const [searchParams] = useSearchParams()
+  const checkIn = searchParams.get('checkIn') ?? '2026-08-28'
+  const checkOut = searchParams.get('checkOut') ?? '2026-09-02'
+  const guests = Number(searchParams.get('guests')) || 2
   const property = getPropertyById(Number(id))
   const [isSaved, setIsSaved] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -116,7 +120,12 @@ function PropertyDetailsPage() {
 
       <div className="mt-8 grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_340px]">
   <div className="xl:col-start-2 xl:row-start-1">
-    <BookingCard property={property} />
+    <BookingCard
+  property={property}
+  initialCheckIn={checkIn}
+  initialCheckOut={checkOut}
+  initialGuests={guests}
+/>
   </div>
   <div className="xl:col-start-1 xl:row-start-1">
     <PropertySections property={property} />

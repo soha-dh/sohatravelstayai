@@ -5,12 +5,20 @@ import Button from '../ui/Button'
 
 type BookingCardProps = {
   property: Property
+  initialCheckIn?: string
+  initialCheckOut?: string
+  initialGuests?: number
 }
 
-function BookingCard({ property }: BookingCardProps) {
-  const [checkIn, setCheckIn] = useState('2026-08-28')
-  const [checkOut, setCheckOut] = useState('2026-09-02')
-  const [guests, setGuests] = useState(Math.min(2, property.guests))
+function BookingCard({
+  property,
+  initialCheckIn = '2026-08-28',
+  initialCheckOut = '2026-09-02',
+  initialGuests = 2,
+}: BookingCardProps) {
+  const [checkIn, setCheckIn] = useState(initialCheckIn)
+  const [checkOut, setCheckOut] = useState(initialCheckOut)
+  const [guests, setGuests] = useState(Math.min(initialGuests, property.guests))
   const [message, setMessage] = useState('')
 
   function handleSubmit(event: { preventDefault: () => void }, instant: boolean) {
