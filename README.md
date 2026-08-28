@@ -31,7 +31,8 @@ Property data currently comes from local mock JSON, not a live backend.
 - [x] Typed mock data for destinations and properties
 - [x] Home page UI (navbar, hero, listings, footer)
 - [x] Search Results page with filters
-- [ ] Additional pages (Destinations, About, property detail)
+- [x] Property details page
+- [ ] Additional pages (Destinations, About)
 
 ## Getting started
 
