@@ -136,13 +136,14 @@ function SearchResultsPage() {
     <div className="min-h-screen bg-page">
       <Navbar />
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
-        <SearchBox
-          initialWhere={where}
-          initialCheckIn={checkIn}
-          initialCheckOut={checkOut}
-          initialGuests={guestCount}
-          submitLabel="Update search"
-        />
+       <SearchBox
+  key={`${where}-${checkIn}-${checkOut}-${guests}`}
+  initialWhere={where}
+  initialCheckIn={checkIn}
+  initialCheckOut={checkOut}
+  initialGuests={guestCount}
+  submitLabel="Update search"
+/>
 
         <nav className="mt-8 text-sm text-slate-500">
           <Link to="/" className="hover:text-slate-900">
