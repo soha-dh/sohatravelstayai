@@ -20,15 +20,31 @@ function BookingCard({
   const [checkOut, setCheckOut] = useState(initialCheckOut)
   const [guests, setGuests] = useState(Math.min(initialGuests, property.guests))
   const [message, setMessage] = useState('')
+  const [dateError, setDateError] = useState('')
 
-  function handleSubmit(event: { preventDefault: () => void }, instant: boolean) {
-    event.preventDefault()
-    setMessage(
-      instant
-        ? `Instant booking confirmed for ${property.name}.`
-        : `Booking request sent for ${property.name}.`,
-    )
+function addOneDay(dateValue: string) {
+  const date = new Date(`${dateValue}T00:00:00`)
+  date.setDate(date.getDate() + 1)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+ function handleSubmit(event: { preventDefault: () => void }, instant: boolean) {
+  event.preventDefault()
+  if (checkOut <= checkIn) {
+    setDateError('Check-out must be after check-in.')
+    setMessage('')
+    return
   }
+  setDateError('')
+  setMessage(
+    instant
+      ? `Instant booking confirmed for ${property.name}.`
+      : `Booking request sent for ${property.name}.`,
+  )
+}
 
   return (
     <aside className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200/70 xl:sticky xl:top-24">
@@ -52,7 +68,14 @@ function BookingCard({
             <input
               type="date"
               value={checkIn}
-              onChange={(event) => setCheckIn(event.target.value)}
+              onChange={(event) => {
+  const value = event.target.value
+  setCheckIn(value)
+  if (checkOut <= value) {
+    setCheckOut(addOneDay(value))
+  }
+  setDateError('')
+}}
               className="mt-1 h-11 w-full rounded-xl border border-slate-200 px-3 text-sm text-slate-900"
             />
           </label>
@@ -61,7 +84,11 @@ function BookingCard({
             <input
               type="date"
               value={checkOut}
-              onChange={(event) => setCheckOut(event.target.value)}
+              min={checkIn}
+onChange={(event) => {
+  setCheckOut(event.target.value)
+  setDateError('')
+}}
               className="mt-1 h-11 w-full rounded-xl border border-slate-200 px-3 text-sm text-slate-900"
             />
           </label>
@@ -88,12 +115,13 @@ function BookingCard({
             type="button"
             variant="ghost"
             className="w-full border border-brand text-brand hover:bg-blue-50"
-            onClick={(event) => handleSubmit(event, true)}
+            onClick={() => handleSubmit({ preventDefault() {} }, true)}
           >
             <Zap className="mr-1 h-4 w-4" />
             Instant Book
           </Button>
         ) : null}
+        {dateError ? <p className="mt-3 text-sm text-red-600">{dateError}</p> : null}
       </form>
 
       {message ? <p className="mt-3 text-sm text-green-700">{message}</p> : null}

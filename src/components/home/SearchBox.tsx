@@ -3,6 +3,7 @@ import { destinations } from '../../data'
 import { Calendar, MapPin, Minus, Plus, Search, Users } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
+
 type SearchBoxProps = {
   initialWhere?: string
   initialCheckIn?: string
@@ -23,17 +24,32 @@ function SearchBox({
   const [checkOut, setCheckOut] = useState(initialCheckOut)
   const [guests, setGuests] = useState(initialGuests)
   const navigate = useNavigate()
+  const [dateError, setDateError] = useState('')
+
+function addOneDay(dateValue: string) {
+  const date = new Date(`${dateValue}T00:00:00`)
+  date.setDate(date.getDate() + 1)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
 
   function handleSubmit(event: { preventDefault: () => void }) {
-    event.preventDefault()
-    const params = new URLSearchParams({
-      where,
-      checkIn,
-      checkOut,
-      guests: String(guests),
-    })
-    navigate(`/stays?${params.toString()}`)
+  event.preventDefault()
+  if (checkOut <= checkIn) {
+    setDateError('Check-out must be after check-in.')
+    return
   }
+  setDateError('')
+  const params = new URLSearchParams({
+    where,
+    checkIn,
+    checkOut,
+    guests: String(guests),
+  })
+  navigate(`/stays?${params.toString()}`)
+}
 
   const isResultsSearch = submitLabel !== 'Search'
 
@@ -68,7 +84,14 @@ function SearchBox({
           <input
             type="date"
             value={checkIn}
-            onChange={(event) => setCheckIn(event.target.value)}
+            onChange={(event) => {
+  const value = event.target.value
+  setCheckIn(value)
+  if (checkOut <= value) {
+    setCheckOut(addOneDay(value))
+  }
+  setDateError('')
+}}
             className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none"
           />
         </span>
@@ -81,7 +104,11 @@ function SearchBox({
           <input
             type="date"
             value={checkOut}
-            onChange={(event) => setCheckOut(event.target.value)}
+            min={checkIn}
+onChange={(event) => {
+  setCheckOut(event.target.value)
+  setDateError('')
+}}
             className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none"
           />
         </span>
@@ -114,7 +141,9 @@ function SearchBox({
           </div>
         </div>
       </div>
-
+{dateError ? (
+  <p className="px-3 text-sm text-red-600 md:col-span-full">{dateError}</p>
+) : null}
       <button
         type="submit"
         className={`inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand px-5 text-sm font-medium text-white transition hover:bg-blue-700 ${
