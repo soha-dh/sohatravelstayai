@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   AirVent,
   Bath,
@@ -55,7 +56,9 @@ function ResultCard({ property }: ResultCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-4 md:p-5">
-        <h3 className="text-lg font-semibold text-slate-900">{property.name}</h3>
+        <Link to={`/stays/${property.id}`} className="text-lg font-semibold text-slate-900 hover:text-brand">
+  {property.name}
+</Link>
         <p className="mt-1 flex items-center gap-1 text-sm text-slate-500">
           <MapPin className="h-4 w-4 text-brand" />
           {property.location}

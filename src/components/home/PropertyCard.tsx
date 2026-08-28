@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react'
 import type { Property } from '../../types'
 import Card from '../ui/Card'
+import { Link } from 'react-router-dom'
 
 type PropertyCardProps = {
   property: Property
@@ -8,6 +9,8 @@ type PropertyCardProps = {
 
 function PropertyCard({ property }: PropertyCardProps) {
   return (
+    
+  <Link to={`/stays/${property.id}`}>
     <Card className="group">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
@@ -28,7 +31,9 @@ function PropertyCard({ property }: PropertyCardProps) {
         </p>
       </div>
     </Card>
-  )
+  </Link>
+)
+  
 }
 
 export default PropertyCard
