@@ -1,8 +1,8 @@
 # SohaTravelStay
 
-A travel stay marketplace UI built as a frontend portfolio project. Users can browse destinations and featured stays, with search and responsive layouts.
+A travel stay marketplace UI built as a frontend portfolio project. Users can browse destinations and featured stays, then search with filters and sorting.
 
-The first release is a production-style Home page. Property data currently comes from local mock JSON, not a live backend.
+Property data currently comes from local mock JSON, not a live backend.
 
 ## Tech stack
 
@@ -18,6 +18,9 @@ The first release is a production-style Home page. Property data currently comes
 - Responsive navbar with a mobile drawer menu
 - Hero search for location, dates, and guests
 - Popular destinations and featured stays from typed mock data
+- Search Results page with listing cards
+- Desktop sidebar filters and mobile filter sheet
+- Sort by recommended, price, or rating
 - Value proposition and footer with newsletter signup
 
 ## Current status
@@ -27,7 +30,8 @@ The first release is a production-style Home page. Property data currently comes
 - [x] Routing
 - [x] Typed mock data for destinations and properties
 - [x] Home page UI (navbar, hero, listings, footer)
-- [ ] Additional pages
+- [x] Search Results page with filters
+- [ ] Additional pages (Destinations, About, property detail)
 
 ## Getting started
 
@@ -36,7 +40,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173](http://localhost:5173). Search from the home page to open `/stays`.
 
 ## Scripts
 
@@ -56,6 +60,7 @@ src/
   components/
     home/        Home page sections and cards
     layout/      Navbar and Footer
+    search/      Search Results cards and filters
     ui/          Reusable Button and Card
   data/          Mock JSON and typed data exports
   pages/         Route-level screens
