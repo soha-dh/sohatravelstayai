@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, Images, X } from 'lucide-react'
+import PhotoViewer from './PhotoViewer'
 
 type PropertyGalleryProps = {
   name: string
@@ -9,6 +10,7 @@ type PropertyGalleryProps = {
 function PropertyGallery({ name, images }: PropertyGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
+  const [viewerIndex, setViewerIndex] = useState<number | null>(null)
   const total = images.length
   const extraCount = Math.max(total - 5, 0)
   const hasMoreTile = extraCount > 0
@@ -127,40 +129,47 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
       </button>
 
       {isOpen ? (
-        <div className="fixed inset-0 z-[80] overflow-y-auto bg-slate-950/90 p-4">
-          <div className="mx-auto flex max-w-5xl items-center justify-between py-4 text-white">
-            <p className="text-sm">
-              {name} · {total} photos
-            </p>
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"
-              aria-label="Close gallery"
-              onClick={() => setIsOpen(false)}
-            >
-              <X className="h-5 w-5" />
-            </button>
-          </div>
-          <div className="mx-auto grid max-w-5xl gap-3 sm:grid-cols-2">
-            {images.map((image, index) => (
-              <button
-                key={`${image}-${index}`}
-                type="button"
-                onClick={() => {
-                  setCurrentIndex(index)
-                  setIsOpen(false)
-                }}
-              >
-                <img
-                  src={image}
-                  alt={`${name} photo ${index + 1}`}
-                  className="h-56 w-full rounded-xl object-cover"
-                />
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : null}
+  <div className="fixed inset-0 z-[80] overflow-y-auto bg-slate-950/90 p-4">
+    <div className="mx-auto flex max-w-5xl items-center justify-between py-4 text-white">
+      <p className="text-sm">
+        {name} · {total} photos
+      </p>
+      <button
+        type="button"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"
+        aria-label="Close gallery"
+        onClick={() => setIsOpen(false)}
+      >
+        <X className="h-5 w-5" />
+      </button>
+    </div>
+    <div className="mx-auto grid max-w-5xl gap-3 sm:grid-cols-2">
+      {images.map((image, index) => (
+        <button
+          key={`${image}-${index}`}
+          type="button"
+          onClick={() => setViewerIndex(index)}
+        >
+          <img
+            src={image}
+            alt={`${name} photo ${index + 1}`}
+            className="h-56 w-full rounded-xl object-cover"
+          />
+        </button>
+      ))}
+    </div>
+  </div>
+) : null}
+
+{viewerIndex !== null ? (
+  <PhotoViewer
+    name={name}
+    images={images}
+    startIndex={viewerIndex}
+    onClose={() => setViewerIndex(null)}
+    onIndexChange={setCurrentIndex}
+  />
+) : null}
     </>
   )
 }
