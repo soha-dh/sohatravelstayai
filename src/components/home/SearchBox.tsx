@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { destinations } from '../../data'
 import { Calendar, MapPin, Minus, Plus, Search, Users } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
@@ -41,18 +42,24 @@ function SearchBox({
       onSubmit={handleSubmit}
       className="grid w-full grid-cols-1 gap-3 rounded-2xl bg-white p-3 shadow-lg md:grid-cols-[1.2fr_1fr_1fr_1fr_auto] md:items-center md:gap-0 md:p-2"
     >
-      <label className="flex cursor-text items-center gap-3 rounded-xl px-4 py-3 md:border-r md:border-slate-200">
-        <MapPin className="h-5 w-5 shrink-0 text-brand" />
-        <span className="min-w-0 flex-1">
-          <span className="block text-xs font-medium text-slate-500">Where</span>
-          <input
-            type="text"
-            value={where}
-            onChange={(event) => setWhere(event.target.value)}
-            className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none"
-          />
-        </span>
-      </label>
+      <label className="flex items-center gap-3 rounded-xl px-4 py-3 md:border-r md:border-slate-200">
+  <MapPin className="h-5 w-5 shrink-0 text-brand" />
+  <span className="min-w-0 flex-1">
+    <span className="block text-xs font-medium text-slate-500">Where</span>
+    <select
+      value={where}
+      onChange={(event) => setWhere(event.target.value)}
+      className="w-full bg-transparent text-sm font-medium text-slate-900 outline-none"
+    >
+      <option value="All">All</option>
+      {destinations.map((destination) => (
+        <option key={destination.id} value={destination.name}>
+          {destination.name}
+        </option>
+      ))}
+    </select>
+  </span>
+</label>
 
       <label className="flex cursor-text items-center gap-3 rounded-xl px-4 py-3 md:border-r md:border-slate-200">
         <Calendar className="h-5 w-5 shrink-0 text-brand" />
