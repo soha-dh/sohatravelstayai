@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { properties } from '../../data'
 import PropertyCard from './PropertyCard'
 
 function FeaturedStays() {
+  const navigate = useNavigate()
+
   return (
     <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
       <div className="mb-8 flex items-end justify-between gap-4">
@@ -14,12 +16,13 @@ function FeaturedStays() {
             Handpicked places for your next adventure.
           </p>
         </div>
-        <Link
-          to="/"
-          className="hidden text-sm font-medium text-brand hover:text-blue-700 sm:inline"
+        <button
+          type="button"
+          className="shrink-0 rounded-lg px-3 py-2 text-sm font-medium text-brand hover:bg-blue-50 hover:text-blue-700"
+          onClick={() => navigate('/stays')}
         >
           View all
-        </Link>
+        </button>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">

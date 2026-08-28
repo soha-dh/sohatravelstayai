@@ -11,7 +11,7 @@ type SearchBoxProps = {
 }
 
 function SearchBox({
-  initialWhere = 'Istanbul',
+  initialWhere = 'All',
   initialCheckIn = '2026-08-28',
   initialCheckOut = '2026-09-02',
   initialGuests = 2,

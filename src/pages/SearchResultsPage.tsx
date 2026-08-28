@@ -22,7 +22,7 @@ function toggleNumber(list: number[], value: number) {
 
 function SearchResultsPage() {
   const [searchParams] = useSearchParams()
-  const where = searchParams.get('where') ?? 'Istanbul'
+  const where = searchParams.get('where') ?? 'All'
   const checkIn = searchParams.get('checkIn') ?? '2026-08-28'
   const checkOut = searchParams.get('checkOut') ?? '2026-09-02'
   const guests = searchParams.get('guests') ?? '2'
@@ -45,12 +45,14 @@ function SearchResultsPage() {
     }
   }, [isFiltersOpen])
 
-  const baseResults = properties.filter((property) => {
-    const matchesPlace =
-      property.city.toLowerCase().includes(query) ||
-      property.location.toLowerCase().includes(query)
-    return matchesPlace && property.guests >= guestCount
-  })
+const isAllPlaces = query === '' || query === 'all'
+const baseResults = properties.filter((property) => {
+  const matchesPlace =
+    isAllPlaces ||
+    property.city.toLowerCase().includes(query) ||
+    property.location.toLowerCase().includes(query)
+  return matchesPlace && property.guests >= guestCount
+})
 
   const typeCounts = Object.fromEntries(
     ['Apartment', 'Villa', 'House', 'Boutique hotel', 'Other'].map((type) => [
@@ -150,13 +152,13 @@ function SearchResultsPage() {
             Home
           </Link>
           <span> › </span>
-          <span>Stays in {where}</span>
+          <span>{isAllPlaces ? 'All stays' : `Stays in ${where}`}</span>
         </nav>
 
         <div className="mt-3 mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-              Stays in {where}
+              {isAllPlaces ? 'All stays' : `Stays in ${where}`}
             </h1>
             <p className="mt-1 text-slate-500">
               {results.length} {results.length === 1 ? 'stay' : 'stays'} found
