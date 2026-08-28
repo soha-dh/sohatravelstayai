@@ -12,7 +12,7 @@ type PropertySectionsProps = {
 }
 
 function PropertySections({ property }: PropertySectionsProps) {
-  const [openSection, setOpenSection] = useState<SectionId>('about')
+  const [openSection, setOpenSection] = useState<SectionId | null>('about')
   const [showMore, setShowMore] = useState(false)
   const [showAllAmenities, setShowAllAmenities] = useState(false)
   const visibleAmenities = showAllAmenities
@@ -33,8 +33,8 @@ function PropertySections({ property }: PropertySectionsProps) {
   }
 
   function toggle(id: SectionId) {
-    setOpenSection((current) => (current === id ? current : id))
-  }
+  setOpenSection((current) => (current === id ? null : id))
+}
 
   return (
     <div>
