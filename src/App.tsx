@@ -4,6 +4,7 @@ import PropertyDetailsPage from './pages/PropertyDetailsPage'
 import SearchResultsPage from './pages/SearchResultsPage'
 import CheckoutPage from './pages/CheckoutPage'
 import ReviewPage from './pages/ReviewPage'
+import ConfirmationPage from './pages/ConfirmationPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/stays/:id" element={<PropertyDetailsPage />} />
       <Route path="/stays/:id/checkout" element={<CheckoutPage />} />
       <Route path="/stays/:id/review" element={<ReviewPage />} />
+      <Route path="/stays/:id/confirmation" element={<ConfirmationPage />} />
     </Routes>
   )
 }

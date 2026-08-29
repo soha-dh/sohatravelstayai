@@ -33,7 +33,8 @@ Property data currently comes from local mock JSON, not a live backend.
 - [x] Search Results page with filters
 - [x] Property details page
 - [x] Booking checkout page (details step)
-- [ ] Review & pay
+- [x] Review & pay page
+- [ ] Booking confirmation page
 - [ ] Additional pages (Destinations, About)
 
 ## Getting started
