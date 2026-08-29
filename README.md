@@ -4,6 +4,10 @@ A travel stay marketplace UI built as a frontend portfolio project. Users can br
 
 Property data currently comes from local mock JSON, not a live backend.
 
+## Live demo
+
+The app is deployed on Vercel: [https://sohatravelstay.xyz](https://sohatravelstay.xyz)
+
 ## Tech stack
 
 - React 19
