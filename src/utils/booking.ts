@@ -25,3 +25,13 @@ export function formatStayDate(dateValue: string) {
   const weekday = date.toLocaleDateString('en-US', { weekday: 'short' })
   return `${month} ${date.getDate()}, ${weekday}`
 }
+
+export function createConfirmationNumber() {
+  const year = new Date().getFullYear()
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+  let code = ''
+  for (let i = 0; i < 5; i += 1) {
+    code += alphabet[Math.floor(Math.random() * alphabet.length)]
+  }
+  return `TS-${year}-${code}`
+}
