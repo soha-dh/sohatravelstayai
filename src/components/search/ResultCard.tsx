@@ -41,12 +41,12 @@ function ResultCard({ property }: ResultCardProps) {
         }}
         className="flex min-w-0 flex-1 flex-col md:flex-row"
       >
-        <div className="relative md:w-72 lg:w-80">
-          <img
-            src={property.image}
-            alt={property.name}
-            className="h-56 w-full object-cover md:h-full"
-          />
+        <div className="relative h-56 w-full shrink-0 overflow-hidden md:h-auto md:min-h-full md:w-72 lg:w-80">
+  <img
+    src={property.image}
+    alt={property.name}
+    className="absolute inset-0 h-full w-full object-cover"
+  />
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-sm font-medium text-slate-900 shadow-sm md:hidden">
             <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
             {property.rating}

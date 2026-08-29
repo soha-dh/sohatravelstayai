@@ -12,7 +12,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [viewerIndex, setViewerIndex] = useState<number | null>(null)
   const total = images.length
-  const extraCount = Math.max(total - 5, 0)
+  const extraCount = Math.max(total - 6, 0)
   const hasMoreTile = extraCount > 0
 
   function showPrevious() {
@@ -65,7 +65,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
           <img
             src={images[currentIndex]}
             alt={`${name} photo ${currentIndex + 1}`}
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <GalleryControls />
         </div>
@@ -76,14 +76,14 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             className="relative col-span-2 min-h-0 overflow-hidden rounded-lg"
             onClick={() => setCurrentIndex(1)}
           >
-            <img src={images[1]} alt="" className="h-full w-full object-cover" />
+            <img src={images[1]} alt="" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
             className="relative col-span-2 min-h-0 overflow-hidden rounded-lg"
             onClick={() => setCurrentIndex(2)}
           >
-            <img src={images[2]} alt="" className="h-full w-full object-cover" />
+            <img src={images[2]} alt="" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
@@ -92,7 +92,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             }`}
             onClick={() => setCurrentIndex(3)}
           >
-            <img src={images[3]} alt="" className="h-full w-full object-cover" />
+            <img src={images[3]} alt="" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
@@ -101,7 +101,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             }`}
             onClick={() => setCurrentIndex(4)}
           >
-            <img src={images[4]} alt="" className="h-full w-full object-cover" />
+            <img src={images[4]} alt="" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           {hasMoreTile ? (
             <button
@@ -109,7 +109,11 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
               className="relative col-span-1 min-h-0 overflow-hidden rounded-lg"
               onClick={() => setIsOpen(true)}
             >
-              <img src={images[4]} alt="" className="h-full w-full object-cover" />
+              <img
+  src={images[5] ?? images[4]}
+  alt=""
+  className="absolute inset-0 h-full w-full object-cover"
+/>
               <span className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/45 text-white">
                 <span className="text-xl font-semibold">+{extraCount}</span>
                 <span className="text-xs">Photos</span>

@@ -1,34 +1,34 @@
 {
   "destinations": [
-    {
-      "id": 1,
-      "name": "Istanbul",
-      "country": "Türkiye",
-      "stays": 248,
-      "image": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200"
-    },
-    {
-      "id": 2,
-      "name": "Antalya",
-      "country": "Türkiye",
-      "stays": 186,
-      "image": "https://images.unsplash.com/photo-1595576508898-0ad5c879a061"
-    },
-    {
-      "id": 3,
-      "name": "Fethiye",
-      "country": "Türkiye",
-      "stays": 124,
-      "image": "https://images.unsplash.com/photo-1530789253388-582c481c54b0"
-    },
-    {
-      "id": 4,
-      "name": "Cappadocia",
-      "country": "Türkiye",
-      "stays": 97,
-      "image": "https://images.unsplash.com/photo-1528181304800-259b08848526"
-    }
-  ],
+  {
+    "id": 1,
+    "name": "Istanbul",
+    "country": "Türkiye",
+    "stays": 248,
+    "image": "https://images.unsplash.com/photo-1527838832700-5059252407fa"
+  },
+  {
+    "id": 2,
+    "name": "Antalya",
+    "country": "Türkiye",
+    "stays": 186,
+    "image": "https://images.unsplash.com/photo-1638100191114-bba76f5e4fbc"
+  },
+  {
+    "id": 3,
+    "name": "Fethiye",
+    "country": "Türkiye",
+    "stays": 124,
+    "image": "https://images.unsplash.com/photo-1591092121781-8173eaa3f98c"
+  },
+  {
+    "id": 4,
+    "name": "Cappadocia",
+    "country": "Türkiye",
+    "stays": 97,
+    "image": "https://images.unsplash.com/photo-1569530593523-083e18aecc75"
+  }
+],
   "properties": [
     {
       "id": 1,
@@ -40,13 +40,16 @@
       "pricePerNight": 145,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
-      "images": [
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811"
-      ],
+"images": [
+  "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+  "https://images.unsplash.com/photo-1613977257363-707ba9348227",
+  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
+  "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
+  "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
+  "https://images.unsplash.com/photo-1578683010236-d716f9a3f461"
+],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "TV", "Heating", "Hair dryer", "Hot tub", "Workspace", "Coffee maker"],
@@ -83,14 +86,17 @@
       "reviews": 94,
       "pricePerNight": 120,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-      "images": [
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
-      ],
+     "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+"images": [
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+  "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+  "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+  "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+  "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+  "https://images.unsplash.com/photo-1631049307264-da0ec9d70304",
+  "https://images.unsplash.com/photo-1554995207-c18c203602cb"
+],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine", "TV", "Heating", "Elevator", "Hair dryer", "Workspace", "Coffee maker"],
@@ -127,14 +133,17 @@
       "reviews": 76,
       "pricePerNight": 110,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
-      "images": [
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
-      ],
+      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+"images": [
+  "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+  "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf",
+  "https://images.unsplash.com/photo-1560185007-cde436f6a4d0",
+  "https://images.unsplash.com/photo-1540518614846-7eded433c457",
+  "https://images.unsplash.com/photo-1600121848594-d8644e57abab",
+  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+  "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+  "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
@@ -171,14 +180,17 @@
       "reviews": 211,
       "pricePerNight": 175,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
-      "images": [
-        "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32"
-      ],
+     "image": "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
+"images": [
+  "https://images.unsplash.com/photo-1572331165267-854da2b10ccc",
+  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+  "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+  "https://images.unsplash.com/photo-1618773928121-c32242e63f39",
+  "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+  "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+],
       "propertyType": "House",
       "amenities": ["Wi-Fi", "Kitchen", "Hot tub"],
       "allAmenities": ["Wi-Fi", "Kitchen", "Hot tub", "Heating", "Hair dryer", "Workspace", "Coffee maker", "TV"],
@@ -215,14 +227,17 @@
       "reviews": 63,
       "pricePerNight": 95,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
-      "images": [
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-      ],
+    "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+"images": [
+  "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+  "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  "https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e",
+  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+  "https://images.unsplash.com/photo-1598928506311-c55ded91a20c",
+  "https://images.unsplash.com/photo-1616594039964-ae9021a400a0",
+  "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
+  "https://images.unsplash.com/photo-1513694203232-719a280e022f"
+],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "TV", "Heating", "Hair dryer", "Coffee maker", "Workspace"],
@@ -260,13 +275,16 @@
       "pricePerNight": 160,
       "currency": "USD",
       "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
-      "images": [
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
-        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
-      ],
+"images": [
+  "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+  "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+  "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136",
+  "https://images.unsplash.com/photo-1600047509782-20d39509f26d",
+  "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9",
+  "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd"
+],
       "propertyType": "Villa",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "Hot tub"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Free parking", "Hot tub", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
@@ -303,14 +321,17 @@
       "reviews": 81,
       "pricePerNight": 130,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-      "images": [
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
-      ],
+    "image": "https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
+"images": [
+  "https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
+  "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+  "https://images.unsplash.com/photo-1497366811353-6870744d04b2",
+  "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace",
+  "https://images.unsplash.com/photo-1560448075-cbc16bb4af8e",
+  "https://images.unsplash.com/photo-1600210492493-0946911123ea",
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "Washing Machine", "TV", "Heating", "Elevator", "Hair dryer", "Workspace"],
@@ -347,14 +368,17 @@
       "reviews": 54,
       "pricePerNight": 88,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      "images": [
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
-        "https://images.unsplash.com/photo-1556912173-3bb406ef7e77",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858"
-      ],
+  "image": "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+"images": [
+  "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+  "https://images.unsplash.com/photo-1518780664697-55e3ad937233",
+  "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
+  "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+  "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e",
+  "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe",
+  "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198",
+  "https://images.unsplash.com/photo-1502672023488-70e25813eb80"
+],
       "propertyType": "Apartment",
       "amenities": ["Wi-Fi", "Kitchen", "Free parking"],
       "allAmenities": ["Wi-Fi", "Kitchen", "Free parking", "TV", "Heating", "Washing Machine", "Coffee maker", "Workspace"],
@@ -391,14 +415,17 @@
       "reviews": 117,
       "pricePerNight": 210,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
-      "images": [
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0",
-        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
-      ],
+     "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+"images": [
+  "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+  "https://images.unsplash.com/photo-1564507592333-c60657eea523",
+  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+  "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af",
+  "https://images.unsplash.com/photo-1595576508898-0ad5c879a061",
+  "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
+  "https://images.unsplash.com/photo-1618220179428-22790b461013",
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
+],
       "propertyType": "Boutique hotel",
       "amenities": ["Wi-Fi", "AC", "Kitchen"],
       "allAmenities": ["Wi-Fi", "AC", "Kitchen", "TV", "Heating", "Elevator", "Hair dryer", "Workspace", "Coffee maker"],
@@ -435,14 +462,17 @@
       "reviews": 39,
       "pricePerNight": 79,
       "currency": "USD",
-      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
-      "images": [
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
-        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154"
-      ],
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+"images": [
+  "https://images.unsplash.com/photo-1497366216548-37526070297c",
+  "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
+  "https://images.unsplash.com/photo-1484101403633-562f891dc89a",
+  "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+  "https://images.unsplash.com/photo-1556911220-bff31c812dba",
+  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace",
+  "https://images.unsplash.com/photo-1560448075-cbc16bb4af8e",
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
+],
       "propertyType": "House",
       "amenities": ["Wi-Fi", "AC", "Washing Machine"],
       "allAmenities": ["Wi-Fi", "AC", "Washing Machine", "TV", "Heating", "Hair dryer", "Workspace", "Coffee maker"],
