@@ -4,15 +4,15 @@ import { House } from 'lucide-react'
 import Button from '../ui/Button'
 
 const companyLinks = [
-  { label: 'About', to: '/' },
-  { label: 'Careers', to: '/' },
-  { label: 'Contact', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Careers', to: '/about' },
+  { label: 'Contact', to: '/about#contact' },
 ]
 
 const exploreLinks = [
-  { label: 'Destinations', to: '/' },
-  { label: 'Stays', to: '/' },
-  { label: 'Travel guide', to: '/' },
+  { label: 'Destinations', to: '/destinations' },
+  { label: 'Stays', to: '/stays' },
+  { label: 'Travel guide', to: '/destinations' },
 ]
 
 const supportLinks = [

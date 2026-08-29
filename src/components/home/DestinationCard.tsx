@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Destination } from '../../types'
 import Card from '../ui/Card'
 
@@ -6,7 +7,8 @@ type DestinationCardProps = {
 }
 
 function DestinationCard({ destination }: DestinationCardProps) {
-  return (
+return (
+  <Link to={`/stays?where=${encodeURIComponent(destination.name)}`}>
     <Card className="group">
       <div className="aspect-[4/3] overflow-hidden">
         <img
@@ -20,7 +22,8 @@ function DestinationCard({ destination }: DestinationCardProps) {
         <p className="mt-1 text-sm text-slate-500">{destination.stays} stays</p>
       </div>
     </Card>
-  )
+  </Link>
+)
 }
 
 export default DestinationCard

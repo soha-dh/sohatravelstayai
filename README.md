@@ -35,7 +35,8 @@ Property data currently comes from local mock JSON, not a live backend.
 - [x] Booking checkout page (details step)
 - [x] Review & pay page
 - [x] Booking confirmation page
-- [ ] Additional pages (Destinations, About)
+- [x] Destinations page
+- [x] About page
 
 ## Getting started
 

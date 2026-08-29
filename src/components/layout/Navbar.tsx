@@ -5,8 +5,8 @@ import Button from '../ui/Button'
 
 const navLinks = [
   { label: 'Stays', to: '/stays', icon: BedDouble },
-  { label: 'Destinations', to: '/', icon: MapPin },
-  { label: 'About', to: '/', icon: Info },
+  { label: 'Destinations', to: '/destinations', icon: MapPin },
+  { label: 'About', to: '/about', icon: Info },
 ]
 
 function Navbar() {
