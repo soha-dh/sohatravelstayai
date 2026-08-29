@@ -26,6 +26,7 @@ The app is deployed on Vercel: [https://sohatravelstay.xyz](https://sohatravelst
 - Desktop sidebar filters and mobile filter sheet
 - Sort by recommended, price, or rating
 - Value proposition and footer with newsletter signup
+- Resized Unsplash images and lazy-loaded offscreen photos
 
 ## Current status
 
@@ -74,6 +75,7 @@ src/
   data/          Mock JSON and typed data exports
   pages/         Route-level screens
   types/         Shared TypeScript types
+  utils/         Booking price helpers and Unsplash image URLs
   App.tsx        Router
   main.tsx       App bootstrap
 ```
@@ -81,3 +83,4 @@ src/
 ## Data
 
 Listings are loaded from `src/data/data.json` and typed in `src/types`. This keeps the UI independent from a backend until an API is added.
+Listing photos stay as Unsplash URLs in `data.json`. `unsplashSrc` in `src/utils/image.ts` adds width and quality when they render, and offscreen images use `loading="lazy"`.
