@@ -5,6 +5,7 @@ type ButtonProps = {
   variant?: 'primary' | 'ghost'
   className?: string
   type?: 'button' | 'submit'
+  form?: string
   onClick?: () => void
 }
 
@@ -12,7 +13,8 @@ function Button({
   children,
   variant = 'primary',
   className = '',
-  type = 'button',
+    type = 'button',
+  form,
   onClick,
 }: ButtonProps) {
   const base =
@@ -24,10 +26,11 @@ function Button({
 
   return (
     <button
-      type={type}
-      onClick={onClick}
-      className={`${base} ${variants[variant]} ${className}`}
-    >
+  type={type}
+  form={form}
+  onClick={onClick}
+  className={`${base} ${variants[variant]} ${className}`}
+>
       {children}
     </button>
   )

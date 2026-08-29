@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Star, Zap } from 'lucide-react'
 import type { Property } from '../../types'
 import Button from '../ui/Button'
@@ -16,10 +17,11 @@ function BookingCard({
   initialCheckOut = '2026-09-02',
   initialGuests = 2,
 }: BookingCardProps) {
+  const navigate = useNavigate()
   const [checkIn, setCheckIn] = useState(initialCheckIn)
   const [checkOut, setCheckOut] = useState(initialCheckOut)
   const [guests, setGuests] = useState(Math.min(initialGuests, property.guests))
-  const [message, setMessage] = useState('')
+
   const [dateError, setDateError] = useState('')
 
 function addOneDay(dateValue: string) {
@@ -31,19 +33,19 @@ function addOneDay(dateValue: string) {
   return `${year}-${month}-${day}`
 }
 
- function handleSubmit(event: { preventDefault: () => void }, instant: boolean) {
+ function handleSubmit(event: { preventDefault: () => void }) {
   event.preventDefault()
   if (checkOut <= checkIn) {
     setDateError('Check-out must be after check-in.')
-    setMessage('')
     return
   }
   setDateError('')
-  setMessage(
-    instant
-      ? `Instant booking confirmed for ${property.name}.`
-      : `Booking request sent for ${property.name}.`,
-  )
+  const params = new URLSearchParams({
+    checkIn,
+    checkOut,
+    guests: String(guests),
+  })
+  navigate(`/stays/${property.id}/checkout?${params.toString()}`)
 }
 
   return (
@@ -61,7 +63,7 @@ function addOneDay(dateValue: string) {
         </p>
       </div>
 
-      <form className="mt-4 space-y-3" onSubmit={(event) => handleSubmit(event, false)}>
+      <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-3">
           <label className="text-xs font-medium text-slate-500">
             Check-in
@@ -115,7 +117,7 @@ onChange={(event) => {
             type="button"
             variant="ghost"
             className="w-full border border-brand text-brand hover:bg-blue-50"
-            onClick={() => handleSubmit({ preventDefault() {} }, true)}
+            onClick={() => handleSubmit({ preventDefault() {} })}
           >
             <Zap className="mr-1 h-4 w-4" />
             Instant Book
@@ -124,8 +126,7 @@ onChange={(event) => {
         {dateError ? <p className="mt-3 text-sm text-red-600">{dateError}</p> : null}
       </form>
 
-      {message ? <p className="mt-3 text-sm text-green-700">{message}</p> : null}
-
+  
       <ul className="mt-5 space-y-2 text-sm text-slate-500">
         <li>Free cancellation</li>
         <li>Best price guarantee</li>
