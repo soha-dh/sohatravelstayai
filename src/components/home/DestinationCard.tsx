@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Destination } from '../../types'
 import Card from '../ui/Card'
+import { unsplashSrc } from '../../utils/image'
 
 type DestinationCardProps = {
   destination: Destination
@@ -12,8 +13,9 @@ return (
     <Card className="group">
       <div className="aspect-[4/3] overflow-hidden">
         <img
-          src={destination.image}
+          src={unsplashSrc(destination.image, 800)}
           alt={destination.name}
+          loading="lazy"
           className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
         />
       </div>

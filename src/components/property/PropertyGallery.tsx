@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, Images, X } from 'lucide-react'
 import PhotoViewer from './PhotoViewer'
+import { unsplashSrc } from '../../utils/image'
 
 type PropertyGalleryProps = {
   name: string
@@ -53,7 +54,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
     <>
       <div className="relative aspect-[4/3] overflow-hidden rounded-2xl lg:hidden">
         <img
-          src={images[currentIndex]}
+          src={unsplashSrc(images[currentIndex], 1200)}
           alt={`${name} photo ${currentIndex + 1}`}
           className="h-full w-full object-cover"
         />
@@ -63,7 +64,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
       <div className="hidden aspect-[2.75/1] grid-cols-2 gap-1 overflow-hidden rounded-2xl lg:grid">
         <div className="relative min-h-0 overflow-hidden rounded-xl">
           <img
-            src={images[currentIndex]}
+            src={unsplashSrc(images[currentIndex], 1400)}
             alt={`${name} photo ${currentIndex + 1}`}
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -76,14 +77,14 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             className="relative col-span-2 min-h-0 overflow-hidden rounded-lg"
             onClick={() => setCurrentIndex(1)}
           >
-            <img src={images[1]} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={unsplashSrc(images[1], 480)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
             className="relative col-span-2 min-h-0 overflow-hidden rounded-lg"
             onClick={() => setCurrentIndex(2)}
           >
-            <img src={images[2]} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={unsplashSrc(images[2], 480)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
@@ -92,7 +93,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             }`}
             onClick={() => setCurrentIndex(3)}
           >
-            <img src={images[3]} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={unsplashSrc(images[3], 480)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           <button
             type="button"
@@ -101,7 +102,7 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
             }`}
             onClick={() => setCurrentIndex(4)}
           >
-            <img src={images[4]} alt="" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={unsplashSrc(images[4], 480)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           </button>
           {hasMoreTile ? (
             <button
@@ -110,10 +111,11 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
               onClick={() => setIsOpen(true)}
             >
               <img
-  src={images[5] ?? images[4]}
-  alt=""
-  className="absolute inset-0 h-full w-full object-cover"
-/>
+                src={unsplashSrc(images[5] ?? images[4], 480)}
+                alt=""
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <span className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/45 text-white">
                 <span className="text-xl font-semibold">+{extraCount}</span>
                 <span className="text-xs">Photos</span>
@@ -155,8 +157,9 @@ function PropertyGallery({ name, images }: PropertyGalleryProps) {
           onClick={() => setViewerIndex(index)}
         >
           <img
-            src={image}
+            src={unsplashSrc(image, 800)}
             alt={`${name} photo ${index + 1}`}
+            loading="lazy"
             className="h-56 w-full rounded-xl object-cover"
           />
         </button>

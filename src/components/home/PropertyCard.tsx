@@ -1,7 +1,8 @@
 import { Star } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import type { Property } from '../../types'
 import Card from '../ui/Card'
-import { Link } from 'react-router-dom'
+import { unsplashSrc } from '../../utils/image'
 
 type PropertyCardProps = {
   property: Property
@@ -14,8 +15,9 @@ function PropertyCard({ property }: PropertyCardProps) {
     <Card className="group">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
-          src={property.image}
+          src={unsplashSrc(property.image, 800)}
           alt={property.name}
+          loading="lazy"
           className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
         />
         <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-sm font-medium text-slate-900 shadow-sm">

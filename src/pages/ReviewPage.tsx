@@ -18,6 +18,7 @@ import Navbar from '../components/layout/Navbar'
 import Button from '../components/ui/Button'
 import { getPropertyById } from '../data'
 import { formatStayDate, getNightCount, getPriceBreakdown } from '../utils/booking'
+import { unsplashSrc } from '../utils/image'
 
 type PaymentMethod = 'card' | 'paypal' | 'gpay' | 'apple'
 
@@ -188,7 +189,7 @@ function ReviewPage() {
 
               <div className="mt-4 flex gap-3">
                 <img
-                  src={property.image}
+                  src={unsplashSrc(property.image, 240)}
                   alt={property.name}
                   className="h-20 w-24 rounded-xl object-cover"
                 />
@@ -395,7 +396,7 @@ function ReviewPage() {
                 <h2 className="text-lg font-semibold text-slate-900">Your booking summary</h2>
                 <div className="mt-4 flex gap-3">
                   <img
-                    src={property.image}
+                    src={unsplashSrc(property.image, 240)}
                     alt={property.name}
                     className="h-16 w-20 rounded-xl object-cover"
                   />

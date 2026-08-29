@@ -1,7 +1,11 @@
 import SearchBox from './SearchBox'
+import { unsplashSrc } from '../../utils/image'
 
-const heroImage =
-  'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80'
+const heroImage = unsplashSrc(
+  'https://images.unsplash.com/photo-1613490493576-7fde63acd811',
+  1600,
+  75,
+)
 
 function Hero() {
   return (

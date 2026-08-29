@@ -14,6 +14,7 @@ import {
 } from 'lucide-react'
 import type { Property } from '../../types'
 import Card from '../ui/Card'
+import { unsplashSrc } from '../../utils/image'
 
 const amenityIcons = {
   'Wi-Fi': Wifi,
@@ -26,9 +27,10 @@ const amenityIcons = {
 
 type ResultCardProps = {
   property: Property
+  priority?: boolean
 }
 
-function ResultCard({ property }: ResultCardProps) {
+function ResultCard({ property, priority = false }: ResultCardProps) {
   const [isFavorite, setIsFavorite] = useState(false)
   const [searchParams] = useSearchParams()
 
@@ -43,8 +45,9 @@ function ResultCard({ property }: ResultCardProps) {
       >
         <div className="relative h-56 w-full shrink-0 overflow-hidden md:h-auto md:min-h-full md:w-72 lg:w-80">
   <img
-    src={property.image}
+    src={unsplashSrc(property.image, 800)}
     alt={property.name}
+    loading={priority ? 'eager' : 'lazy'}
     className="absolute inset-0 h-full w-full object-cover"
   />
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-sm font-medium text-slate-900 shadow-sm md:hidden">

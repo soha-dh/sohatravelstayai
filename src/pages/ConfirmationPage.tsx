@@ -21,6 +21,7 @@ import {
   getNightCount,
   getPriceBreakdown,
 } from '../utils/booking'
+import { unsplashSrc } from '../utils/image'
 
 function BookingStepper({ currentStep }: { currentStep: number }) {
   const steps = [
@@ -122,7 +123,7 @@ function ConfirmationPage() {
     <div>
       <div className="flex gap-3">
         <img
-          src={property.image}
+          src={unsplashSrc(property.image, 240)}
           alt={property.name}
           className="h-20 w-24 rounded-xl object-cover"
         />

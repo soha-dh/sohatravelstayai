@@ -4,6 +4,7 @@ import { ChevronDown, MapPin } from 'lucide-react'
 import type { Property } from '../../types'
 import { amenityIcons } from './amenityIcons'
 import Button from '../ui/Button'
+import { unsplashSrc } from '../../utils/image'
 
 type SectionId = 'about' | 'amenities' | 'reviews' | 'location' | 'rules'
 
@@ -164,8 +165,9 @@ function PropertySections({ property }: PropertySectionsProps) {
 
       <article className="mt-8 flex gap-4 rounded-2xl bg-white p-5 ring-1 ring-slate-200/70">
         <img
-          src={property.host.image}
+          src={unsplashSrc(property.host.image, 128)}
           alt={property.host.name}
+          loading="lazy"
           className="h-16 w-16 rounded-full object-cover"
         />
         <div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { unsplashSrc } from '../../utils/image'
 
 type PhotoViewerProps = {
   name: string
@@ -68,7 +69,7 @@ function PhotoViewer({
         </button>
 
         <img
-          src={images[index]}
+          src={unsplashSrc(images[index], 1600, 75)}
           alt={`${name} photo ${index + 1}`}
           className="max-h-full max-w-full rounded-xl object-contain"
         />

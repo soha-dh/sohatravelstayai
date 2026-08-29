@@ -213,8 +213,12 @@ const baseResults = properties.filter((property) => {
             </p>
           ) : (
             <div className="flex flex-col gap-5">
-              {results.map((property) => (
-                <ResultCard key={property.id} property={property} />
+              {results.map((property, index) => (
+                <ResultCard
+                  key={property.id}
+                  property={property}
+                  priority={index === 0}
+                />
               ))}
             </div>
           )}
